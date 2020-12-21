@@ -1,0 +1,9 @@
+{
+    "description": "Detecting rectangles on PC",
+    "headers": [
+    ],
+    "name": "rectanglespc",
+    "sources": [
+        "main.cpp"
+    ]
+}

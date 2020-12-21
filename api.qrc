@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>misc/api/cpp.api</file>
+        <file>misc/api/mur.api</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>MUR IDE Installer</Name>
+    <Version>1.0.0</Version>
+    <Title>1.0.0 Installer</Title>
+    <Publisher>MUR IDE</Publisher>
+    <StartMenuDir>MUR IDE</StartMenuDir>
+    <TargetDir>@RootDir@murIDE</TargetDir>
+        <AllowSpaceInPath>true</AllowSpaceInPath>
+    <RemoteRepositories>
+        <Repository>
+            <Url>http://128.199.126.75/download/repository</Url>
+        </Repository>
+    </RemoteRepositories>
+</Installer>

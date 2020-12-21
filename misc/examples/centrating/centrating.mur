@@ -1,0 +1,9 @@
+{
+    "description": "Centrating on rectangle",
+    "headers": [
+    ],
+    "name": "centrating",
+    "sources": [
+        "main.cpp"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "description": "Detecting rectangles on MUR",
+    "headers": [
+    ],
+    "name": "rectanglesmur",
+    "sources": [
+        "main.cpp"
+    ]
+}

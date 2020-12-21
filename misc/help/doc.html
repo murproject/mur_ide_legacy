@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mur_api</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* This file is deliberately empty */
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h2 id="-">Функции управления движителями</h2>
+<p>Для управления тягой движителей предусмотрены следующие функции:</p>
+<pre><code class="lang-C++">    setPortA(int val);
+
+    setPortB(int val);
+
+    setPortC(int val);
+
+    setPortD(int val);
+
+    setPorts(int a, int b, int c, int d);
+
+    setPortATime(int val, int ms);
+
+    setPortBTime(int val, int ms);
+
+    setPortCTime(int val, int ms);
+
+    setPortDTime(int val, int ms);
+
+    setPortsTime(int a, int b, int c, int d, int ms);
+</code></pre>
+<p>Условно их можно разделить на 2 типа: перманентная установка тяги и установка тяги на определенное время.<br><strong>Перманентная установка тяги:</strong></p>
+<pre><code class="lang-C++">    setPortA(int val);
+
+    setPortB(int val);
+
+    setPortC(int val);
+
+    setPortD(int val);
+
+    setPorts(int a, int b, int c, int d);
+</code></pre>
+<p>В данных функция аргументами является тяга от -100 до 100.</p>
+<p>Пример использования:</p>
+<p>В данном примере мы установим тягу на порты A и B на 1 секунду (1000 миллисекунд).</p>
+<pre><code class="lang-C++">#include &lt;murAPI.hpp&gt;
+#include &lt;thread&gt;
+
+int main() {
+    mur.setPortA(-50);
+    mur.setPortB(50);
+
+    sleepFor(1000);
+    return 0;
+}
+</code></pre>
+<p><strong>Установка тяги на определенное время: </strong></p>
+<pre><code class="lang-C++">     setPortATime(int val, int ms);
+
+    setPortBTime(int val, int ms);
+
+    setPortCTime(int val, int ms);
+
+    setPortDTime(int val, int ms);
+
+    setPortsTime(int a, int b, int c, int d, int ms);
+</code></pre>
+<p>В данных функция аргументами является тяга от -100 до 100 и время, на которое данная тяга будет установлена (в миллисекундах).</p>
+<p>Пример использования:<br>В данном примере мы установим тягу на порт A и B на 3 секунды. </p>
+<pre><code>#include &lt;murAPI.hpp&gt;
+#include &lt;thread&gt;
+
+int main() {
+    mur.setPortATime(50, 3000);
+    mur.setPortBTime(50, 3000);
+    sleepFor(3000);
+    return 0;
+}
+</code></pre><h2 id="-">Функции управления временем.</h2>
+<p>Для измерения времени в murAPI предусмотрен класс Timer. Класс Timer обладает следующими функциями-членами:</p>
+<pre><code class="lang-C++">    void start(); //Запуск таймера
+
+    void stop(); //Остановка таймера
+
+    long long int elapsed(); //Возвращяет время, прошедшее с момента вызова start. Если start не был вызван вернет 0.
+
+    bool isStarted(); //true если start был вызван, false если start вызван не был или был вызван stop.
+</code></pre>
+<p>Пример использования:<br>В данном примере установим тягу с помощью таймера на порт A на три секунды. </p>
+<pre><code>#include &lt;murAPI.hpp&gt;
+
+int main() {
+
+    Timer t;
+    t.start();
+
+    while (t.elapsed() &lt; 3000) {
+        mur.setPortA(35);
+    }
+    return 0;
+}
+</code></pre><p>Так же, в murAPI предусмотрена функция задержки - <code>void sleepFor(long long int time)</code>.</p>
+<h2 id="-">Функции управления камерами.</h2>
+<p>Для работы с камерой предусмотрены следующие функции:</p>
+<pre><code class="lang-C++">    void initCamera(int id);
+
+    cv::Mat getCameraOneFrame();
+
+    cv::Mat getCameraTwoFrame();
+</code></pre>
+<p>Перед тем как использовать камеру, камера должна быть инициализирована с помощью функции <code>initCamera(int id)</code>. В качестве аргументов, камера принимает номер камеры (0 либо 1);</p>
+<p>Функции <code>cv::Mat getCameraOneFrame()</code> и <code>cv::Mat getCameraTwoFrame()</code> возвращают объект cv::Mat с соответствующей камеры.</p>
+<h2 id="-">Встроеные функции распознования.</h2>
+<p>murAPI предоставляет встроенные функции распознования геометрических примитивов: круг, треугольник, прямоугольник. </p>
+<p>Для работы со встроенными функциями распознования используются следующие функции:</p>
+<pre><code class="lang-C++">    void addDetectorToList(int detector, int camera);
+
+    void removeDetectorFromList(int detector, int camera);
+
+    std::vector&lt;Object&gt; getDetectedObjectsList(int camera);
+</code></pre>
+<p><code>addDetectorToList(int detector, int camera)</code> данная функция добавляет <code>detoctor</code> в список распознавания объектов для камеры <code>camera</code>. К примеру:</p>
+<pre><code class="lang-C++">    mur.addDetectorToList(Object::RECTANGLE, 0);
+</code></pre>
+<p>Добавит детектор прямоугольников к камере 0.</p>
+<p><code>removeDetectorFromList(int detector, int camera)</code> удалит <code>detoctor</code> из списка распознавания объектов для камеры <code>camera</code> (если этот детектор был добавлен ранее, в противном случае ничего не произойдет).<br>К примеру:</p>
+<pre><code class="lang-C++">    mur.removeDetectorFromList(Object::RECTANGLE, 0);
+</code></pre>
+<p>Удалит детектор прямоугольников из списка детекторов камеры 0.</p>
+<p>Функция <code>getDetectedObjectsList(int camera)</code> вернет вектор распознанных объектов - типа <code>Object</code> с <code>camera</code>.<br>К примеру:</p>
+<pre><code class="lang-C++">    for (const auto &amp;obj : mur.getDetectedObjectsList(0)) {
+        if (obj.type == Object::RECTANGLE) {
+            /*DO SOMETHING*/
+        }
+    }
+</code></pre>
+<p>Мы обходим список найденный объектов на камере 0. В случае, если найдет прямоугольник совершаем какие-либо действия.</p>
+<p>Для представления найденных объектов используется следующая структура:</p>
+<pre><code class="lang-C++">struct Object {
+    enum {
+        TRIANGLE = 0,
+        RECTANGLE = 1,
+        CIRCLE = 2,
+        NONE = 3
+    };
+    int x; //X координата центра объекта.
+    int y; //Y координата центра объекта.
+    int r; //Радиус объекта.
+    float angle; //Угол поворота объекта.
+    float size; //Размер объекта.
+    int type; //Тип найденного объекта.
+};
+</code></pre>
+<p>Пример:<br>Следующий пример демонстрирует связанную работу движителей и камер. Если найден прямоугольник и он находится по центру изображения с камеры <code>0</code>, то ничего не происходит. Если объект смещен влево относительно центра на 40 пикселей, то подается тяга на движитель А. Если объект смещен вправо относительно центра на 40 пикселей, то подается тяга на движитель B. Если объект смещен вверх или вних относительно центра на 40 пикселей, то подается тяга на движитель С. </p>
+<pre><code class="lang-C++">#include &lt;murAPI.hpp&gt;
+
+int main() {
+
+    mur.initCamera(0);
+    mur.addDetectorToList(Object::RECTANGLE, 0);
+
+    Timer timer;
+    timer.start();
+    const int indent = 40;
+    const int hCenter = 320 / 2;
+    const int vCenter = 240 / 2;
+    while (timer.elapsed() &lt; 50000) {
+        for (const auto &amp;obj : mur.getDetectedObjectsList(0)) {
+            if (obj.type == Object::RECTANGLE) {
+
+                int powerA = 0;
+                int powerB = 0;
+                int powerC = 0;
+
+                if (obj.x &lt; (hCenter - indent)) { //! Объект смещен влево. 
+                    powerA = 50;
+                    powerB = 0;
+                }
+                if (obj.x &gt; (hCenter + indent)) { //! Объект смещен вправо. 
+                    powerB = 50;
+                    powerA = 0;
+                }
+                if ((obj.x &gt; (hCenter - indent)) &amp;&amp; (obj.x &lt; (hCenter + indent))) {
+                    powerA = 0;
+                    powerB = 0;
+                }
+
+                if (obj.y &lt; (vCenter - indent)) { 
+                    powerC = 50;
+                }
+                if (obj.y &gt; (vCenter + indent)) { 
+                    powerC = -50;
+                }
+                if ((obj.y &gt; (vCenter - indent)) &amp;&amp; (obj.y &lt; (vCenter + indent))) {
+                    powerC = 0;
+                }
+                mur.setPortD(powerA);
+                mur.setPortC(powerB);
+                mur.setPortB(powerC);
+            }
+        }
+    } 
+}
+</code></pre>
+<h2 id="-">Функции получения данных.</h2>
+<p>Для получения данных с датчиков предусмотрены следующие функции:</p>
+<pre><code class="lang-C++">
+    float getInputA();
+
+    float getInputB();
+
+    float getTemperature();
+</code></pre>
+<p>Функция <code>getInputA();</code> и <code>getInputB();</code> предназначены для получения значений с портов A и B соответственно. Функция <code>getTemperature()</code> предназначена для получения данных температуры. </p>
+<p>Пример использования:</p>
+<pre><code class="lang-C++">#include &lt;murAPI.hpp&gt;
+
+int main() {
+    Timer t;
+    t.start();
+
+    const int toSet = 30;
+    const int kP = 7;
+
+    while (t.elapsed() &lt; 20000) {
+        int depth = mur.getInputB();
+        int power = (depth - toSet) * kP * (-1);
+
+        mur.setPortA(power);
+    }
+}
+</code></pre>
+<p>В данном примере реализован пропорциональный регулятор по глубине (30 сантиметров). Датчик давления подключен к порту B и используется вертикальный движитель, подключенный к порту A. </p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

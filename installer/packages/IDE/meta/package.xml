@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>MUR IDE</DisplayName>
+    <Description>The main component</Description>
+    <Version>1.0.3</Version>
+    <ReleaseDate>2016-07-30</ReleaseDate>
+        <Default>true</Default>
+    <Name>IDE</Name>
+    <SortingPriority>100</SortingPriority>
+    <ForcedInstallation>true</ForcedInstallation>
+    <RequiresAdminRights>true</RequiresAdminRights>
+    <Script>installscript.qs</Script>
+    <UserInterfaces>
+        <UserInterface>installshortcutsform.ui</UserInterface>
+    </UserInterfaces>
+    <Licenses>
+        <License name="MUR IDE license" file="license.txt" />
+    </Licenses>
+    <Translations>
+        <Translation>ru.qm</Translation>
+    </Translations>
+</Package>

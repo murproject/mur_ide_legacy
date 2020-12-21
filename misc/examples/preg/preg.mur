@@ -1,0 +1,9 @@
+{
+    "description": "Depth proportional regulator",
+    "headers": [
+    ],
+    "name": "preg",
+    "sources": [
+        "main.cpp"
+    ]
+}

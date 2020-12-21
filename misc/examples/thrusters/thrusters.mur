@@ -1,0 +1,9 @@
+{
+    "description": "Set thrust to all motors",
+    "headers": [
+    ],
+    "name": "thrusters",
+    "sources": [
+        "main.cpp"
+    ]
+}

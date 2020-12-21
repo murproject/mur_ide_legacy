@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>API component</DisplayName>
+    <Description>The main component</Description>
+    <Version>1.0.2</Version>
+    <ReleaseDate>2016-07-30</ReleaseDate>
+        <Default>true</Default>
+    <Name>API</Name>
+    <SortingPriority>80</SortingPriority>
+    <ForcedInstallation>true</ForcedInstallation>
+    <RequiresAdminRights>true</RequiresAdminRights>
+    <Licenses>
+        <License name="API license" file="license.txt" />
+    </Licenses>
+</Package>

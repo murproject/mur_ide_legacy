@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>misc/images/compile.png</file>
+        <file>misc/images/new.png</file>
+        <file>misc/images/redo.png</file>
+        <file>misc/images/save.png</file>
+        <file>misc/images/settings.png</file>
+        <file>misc/images/start.png</file>
+        <file>misc/images/stop.png</file>
+        <file>misc/images/undo.png</file>
+        <file>misc/images/open.png</file>
+        <file>misc/images/cpp-file.png</file>
+        <file>misc/images/h-file.png</file>
+        <file>misc/images/class.png</file>
+        <file>misc/images/project.png</file>
+        <file>misc/images/log.png</file>
+        <file>misc/images/camera.png</file>
+        <file>misc/images/camera_dark.png</file>
+        <file>misc/images/thruster.png</file>
+        <file>misc/images/thruster_dark.png</file>
+        <file>misc/images/document-new.svg</file>
+        <file>misc/images/compass.png</file>
+        <file>misc/images/error.png</file>
+        <file>misc/images/error_point.png</file>
+        <file>misc/images/cpp-folder.png</file>
+        <file>misc/images/h-folder.png</file>
+        <file>misc/images/h-cpp-file.png</file>
+        <file>misc/images/warning.png</file>
+    </qresource>
+</RCC>

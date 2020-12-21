@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package>
+    <DisplayName>localization</DisplayName>
+    <Description>MUR IDE localization</Description>
+    <Version>1.0.1</Version>
+    <ReleaseDate>2016-07-30</ReleaseDate>
+        <Default>true</Default>
+    <Name>IDE.translations</Name>
+    <SortingPriority>100</SortingPriority>
+    <ForcedInstallation>true</ForcedInstallation>
+    <RequiresAdminRights>true</RequiresAdminRights>
+</Package>

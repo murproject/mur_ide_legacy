@@ -1,0 +1,19 @@
+mur.
+setPortA(int val);
+setPortB(int val);
+setPortC(int val);
+setPortD(int val);
+setPorts(int a, int b, int c, int d);
+setPortATime(int val, int sec);
+setPortBTime(int val, int sec);
+setPortCTime(int val, int sec);
+setPortDTime(int val, int sec);
+setPortsTime(int a, int b, int c, int d, int sec);
+getInputA();
+getInputB();
+initCamera(int id);
+getCameraOneFrame();
+getCameraTwoFrame();
+addDetectorToList(int detector, int camera);
+removeDetectorFromList(int detector, int camera);
+getDetectedObjectsList(int camera);
